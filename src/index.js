@@ -9,19 +9,17 @@ import './styles.css'
 const Page = ({ offset, caption, first, second, gradient, onClick }) => (
   <React.Fragment>
     <Parallax.Layer offset={offset} speed={0.2} onClick={onClick}>
-      <div className={`slopeBegin ${gradient}`}>
-        <svg viewBox="0 10 400 500" preserveAspectRatio="xMidYMid meet">
-          <path d="M217.545612,0.5 C140.815411,43.629916 111.73146,105.53956 130.225471,186.342576 C163.312557,330.904847 130.383249,440.475873 29.0816408,486.33023 C19.3437266,490.738115 10.380178,494.794704 2.19099442,498.5 L731.5,498.5 L731.5,0.5 L217.545612,0.5 Z" />
-        </svg>
-      </div>
-    </Parallax.Layer>
-
-    <Parallax.Layer offset={offset} speed={-0.2} onClick={onClick}>
-      <div className={`slopeEnd ${gradient}`} />
+      <div className={`slopeBegin ${gradient}`} />
     </Parallax.Layer>
 
     <Parallax.Layer className="text number" offset={offset} speed={0.3}>
       <span>0{offset + 1}</span>
+    </Parallax.Layer>
+
+    <Parallax.Layer offset={offset} speed={-0.2} onClick={onClick}>
+      <svg viewBox="-250 0 980 500" preserveAspectRatio="xMidYMid meet" width="4000px" height="4000px">
+        <path d="M727.756834,0.5 L217.672645,0.5 C140.942445,43.629916 111.858493,105.53956 130.352505,186.342576 C163.43959,330.904847 130.510282,440.475873 29.2086745,486.33023 C19.4707603,490.738115 10.5072117,494.794704 2.3180281,498.5 L512.328131,498.5 C520.629947,494.743775 529.732741,490.624181 539.636513,486.141221 C640.428339,440.517618 673.210393,331.436574 640.217923,187.287691 C621.644234,106.136554 650.846852,43.8366574 727.756834,0.5 Z" />
+      </svg>
     </Parallax.Layer>
 
     <Parallax.Layer className="text header" offset={offset} speed={0.4}>
@@ -34,15 +32,15 @@ const Page = ({ offset, caption, first, second, gradient, onClick }) => (
     </Parallax.Layer>
   </React.Fragment>
 )
-
+// TODO :
 class App extends React.Component {
   scroll = to => this.refs.parallax.scrollTo(to)
   render() {
     return (
       <Parallax className="container" ref="parallax" pages={3} horizontal scrolling={false}>
-        <Page offset={0} gradient="pink" caption="who we are" first="Sirisoft" second="Hackathon" onClick={() => this.scroll(1)} />
-        <Page offset={1} gradient="teal" caption="what we do" first="consectetur" second="adipiscing elit" onClick={() => this.scroll(2)} />
-        <Page offset={2} gradient="tomato" caption="what we want" first="Morbi quis" second="est dignissim" onClick={() => this.scroll(0)} />
+        <Page offset={0} gradient="pink" caption="are you ready for" first="Sirisoft" second="Hackathon" onClick={() => this.scroll(1)} />
+        <Page offset={1} gradient="teal" caption="who can enter" first="com sci/engineer" second="Burapha University" onClick={() => this.scroll(2)} />
+        <Page offset={2} gradient="tomato" caption="when" first="August" second="27-28" onClick={() => this.scroll(0)} />
       </Parallax>
     )
   }
