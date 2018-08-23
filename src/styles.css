@@ -10,9 +10,13 @@
   font-family: 'Kanit', sans-serif;
   line-height: 0px;
   text-transform: uppercase;
-  text-shadow: -9px 1px 10px rgba(0, 0, 0, 0.75);
+  text-shadow: -9px 1px 9px rgba(0, 0, 0, 0.55);
 }
-
+.shadow {
+  /* Use -webkit- only if supporting: Chrome < 54, iOS < 9.3, Android < 4.4.4 */
+  -webkit-filter: drop-shadow(-9px 1px 9px rgba(0, 0, 0, 0.55));
+  filter: drop-shadow(-9px 1px 9px rgba(0, 0, 0, 0.55));
+}
 .number {
   font-size: 450px;
   color: #373c4c;
@@ -22,6 +26,7 @@
   display: inline-block;
   position: relative;
   transform: translate3d(-35%, 0, 0);
+  text-shadow: -9px 1px 10px rgba(0, 0, 0, 0.75);
 }
 
 .header {
@@ -54,7 +59,7 @@
 }
 
 .pink {
-  background: linear-gradient(to right, deeppink 0%, coral 100%);
+  background: linear-gradient(to right, rgb(129, 31, 194) 0%, rgb(240, 174, 88) 100%);
 }
 
 .teal {

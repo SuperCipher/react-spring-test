@@ -17,7 +17,7 @@ const Page = ({ offset, caption, first, second, gradient, onClick }) => (
     </Parallax.Layer>
 
     <Parallax.Layer offset={offset} speed={-0.2} onClick={onClick}>
-      <svg viewBox="-250 0 980 500" preserveAspectRatio="xMidYMid meet" width="4000px" height="4000px">
+      <svg viewBox="-250 0 980 500" preserveAspectRatio="xMidYMid meet" className={'shadow'}>
         <path d="M727.756834,0.5 L217.672645,0.5 C140.942445,43.629916 111.858493,105.53956 130.352505,186.342576 C163.43959,330.904847 130.510282,440.475873 29.2086745,486.33023 C19.4707603,490.738115 10.5072117,494.794704 2.3180281,498.5 L512.328131,498.5 C520.629947,494.743775 529.732741,490.624181 539.636513,486.141221 C640.428339,440.517618 673.210393,331.436574 640.217923,187.287691 C621.644234,106.136554 650.846852,43.8366574 727.756834,0.5 Z" />
       </svg>
     </Parallax.Layer>
@@ -32,7 +32,7 @@ const Page = ({ offset, caption, first, second, gradient, onClick }) => (
     </Parallax.Layer>
   </React.Fragment>
 )
-// TODO :
+
 class App extends React.Component {
   scroll = to => this.refs.parallax.scrollTo(to)
   render() {
