@@ -12,9 +12,7 @@ const Page = ({ offset, caption, first, second, gradient, onClick }) => (
       <div className={`slopeBegin ${gradient}`} />
     </Parallax.Layer>
 
-    <Parallax.Layer className="text number" offset={offset} speed={0.3}>
-      <span>0{offset + 1}</span>
-    </Parallax.Layer>
+    <Parallax.Layer className="text number" offset={offset} speed={0.3} />
 
     <Parallax.Layer offset={offset} speed={-0.2} onClick={onClick}>
       <svg viewBox="-250 0 980 500" preserveAspectRatio="xMidYMid meet" className={'shadow'}>

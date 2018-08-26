@@ -44,6 +44,7 @@
 .slopeBegin {
   background-color: #20232f;
   clip-path: polygon(20vw 0, 70% 0, calc(70% - 20vw) 100%, 0 100%);
+  box-shadow: 0px 0px 0px 0px #0ff;
 }
 
 .slopeEnd {
@@ -59,11 +60,11 @@
 }
 
 .pink {
-  background: linear-gradient(to right, rgb(129, 31, 194) 0%, rgb(240, 174, 88) 100%);
+  background: linear-gradient(to right, rgb(33, 36, 240) 0%, rgb(62, 192, 243) 100%);
 }
 
 .teal {
-  background: linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%);
+  background: linear-gradient(to right, rgb(13, 143, 78) 0%, rgb(100, 255, 255) 100%);
 }
 
 .tomato {
